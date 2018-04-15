@@ -41,12 +41,15 @@ else:
 FLAGS = tf.app.flags.FLAGS
 
 tf.app.flags.DEFINE_string('checkpoint_dir',
-                           './inception_finetuned_models/birds_valid299/model.ckpt-5000',
+                           './inception_finetuned_models/birds_valid299/model.ckpt',
                            """Path where to read model checkpoints.""")
 
 tf.app.flags.DEFINE_string('image_folder', 
-							'/Users/han/Documents/CUB_200_2011/CUB_200_2011/images',
+							'/home/joseph/workspace/StackGAN-v2/models/birds_3stages_multicaption/iteration27600/single_samples/valid',
 							"""Path where to load the images """)
+# tf.app.flags.DEFINE_string('image_folder',
+# 							'/home/joseph/workspace/StackGAN-v2/models/birds_3stages_multicaption/iteration27600/single_samples/valid',
+# 							"""Path where to load the images """)
 
 tf.app.flags.DEFINE_integer('num_classes', 50,      # 20 for flowers
                             """Number of classes """)
