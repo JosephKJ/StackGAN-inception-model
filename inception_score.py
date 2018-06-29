@@ -41,20 +41,28 @@ else:
 FLAGS = tf.app.flags.FLAGS
 
 tf.app.flags.DEFINE_string('checkpoint_dir',
-                           './inception_finetuned_models/flowers_valid299/model.ckpt',
+                           '/home/joseph/workspace/StackGAN-inception-model/inception_finetuned_models/birds_valid299/model.ckpt',
                            """Path where to read model checkpoints.""")
 
-tf.app.flags.DEFINE_string('image_folder', 
-							'/home/joseph/workspace/aRTISt/output/flowers_2018_06_22_13_37_37/model/iteration99500/single_samples/valid/jpg',
+# tf.app.flags.DEFINE_string('checkpoint_dir',
+#                            '/home/joseph/workspace/StackGAN-inception-model/inception_finetuned_models/flowers_valid299/model.ckpt',
+#                            """Path where to read model checkpoints.""")
+# flowers_2018_06_22_13_37_37
+tf.app.flags.DEFINE_string('image_folder',
+							'/home/joseph/workspace/birds_models_artist/stage/single_samples/valid',
 							"""Path where to load the images """)
+
 # tf.app.flags.DEFINE_string('image_folder',
-# 							'/home/joseph/workspace/StackGAN-v2/models/birds_3stages_CCN/iteration70000/single_samples/valid',
+# 							'/home/joseph/workspace/aRTISt/output/flowers_2018_06_22_13_37_37/model/iteration80500/single_samples/valid/jpg',
+# 							"""Path where to load the images """)
+# tf.app.flags.DEFINE_string('image_folder',
+# 							'/home/joseph/workspace/aRTISt/output/birds_2018_06_20_15_25_07/model/iteration75000/single_samples/valid/',
 # 							"""Path where to load the images """)
 # tf.app.flags.DEFINE_string('image_folder',
 # 							'/home/joseph/workspace/StackGAN-v2/models/birds_3stages_multicaption/iteration27600/single_samples/valid',
 # 							"""Path where to load the images """)
 
-tf.app.flags.DEFINE_integer('num_classes', 20,      # 20 for flowers # 50 for birds
+tf.app.flags.DEFINE_integer('num_classes', 50,      # 20 for flowers # 50 for birds
                             """Number of classes """)
 tf.app.flags.DEFINE_integer('splits', 10,
                             """Number of splits """)
